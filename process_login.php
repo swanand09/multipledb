@@ -41,12 +41,16 @@ try {
         case "mysql":
               # MySQL with PDO_MYSQL  
               $DBH = new PDO("mysql:host=$db_ip;dbname=$db_name", $db_usrnm, $db_pwd);
-            echo "mysql connected";
+              echo "mysql connected<br>";
+              $result = $DBH->query("show tables");
+              while ($row = $result->fetch(PDO::FETCH_NUM)) {
+                 echo $row[0]."</br>";
+              }  
         break;
     
         case "mssql":
               # MS SQL Server with PDO_DBLIB  
-              $DBH = new PDO("mssql:host=$db_ip;dbname=$db_name, $db_usrnm, $db_pwd");  
+              $DBH = new PDO("mssql:host=$db_ip, $db_usrnm, $db_pwd");  
             echo "mssql connected";
         break;
     
@@ -70,6 +74,6 @@ try {
     
 }  
 catch(PDOException $e) {  
-    echo $e->getMessage();  
+    echo utf8_encode($e->getMessage());  
 } 
 ?>

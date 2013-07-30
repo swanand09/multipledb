@@ -1,6 +1,6 @@
  <form action="process_login.php" method="post" name="login_frm">
     <fieldset>
-      <legend>Fieldset</legend>
+      <legend>DB connection</legend>
 
       <div class="row">
         <div class="large-4 columns">
