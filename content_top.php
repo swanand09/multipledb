@@ -12,13 +12,23 @@
   
 
   <script src="js/vendor/custom.modernizr.js"></script>
+  <script src="js/vendor/jquery.js"></script>
+  
+  </script>
   <style>
       fieldset {
         border: 1px solid #DDDDDD;
         margin: 4.125em auto;
         padding: 1.25em;
-        width:30%;
-        
+        width:50%;        
+    }
+    div#result{
+        margin: 4.125em auto;
+         width:50%; 
+    }
+    div#content_main{
+         margin: 4.125em auto;
+          width:60%;
     }
   </style>
 </head>

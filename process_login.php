@@ -44,7 +44,7 @@ try {
               echo "mysql connected<br>";
               $result = $DBH->query("show tables");
               while ($row = $result->fetch(PDO::FETCH_NUM)) {
-                 echo $row[0]."</br>";
+                 echo '<div class="row"> <div class="large-4 columns">'.$row[0].'</div></div>';
               }  
         break;
     
